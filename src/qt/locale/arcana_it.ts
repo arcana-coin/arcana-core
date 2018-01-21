@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your Arcana addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Questo è un elenco di indirizzi Arcana a cui puoi inviare pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare bitcoin.</translation>
+        <translation>Questo è un elenco di indirizzi Arcana a cui puoi inviare pagamenti. Controlla sempre l'importo e l'indirizzo del beneficiario prima di inviare arcana.</translation>
     </message>
     <message>
         <source>These are your Arcana addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -1134,7 +1134,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di bitcoin.</translation>
+        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di arcana.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>

@@ -166,7 +166,7 @@ ARCANA_MM = \
   qt/macnotificationhandler.mm
 
 QT_MOC = \
-  qt/bitcoin.moc \
+  qt/arcana.moc \
   qt/arcanaamountfield.moc \
   qt/callback.moc \
   qt/intro.moc \
