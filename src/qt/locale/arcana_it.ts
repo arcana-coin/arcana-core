@@ -2861,7 +2861,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>arcana-core</name>
     <message>
         <source>Options:</source>
         <translation>Opzioni:</translation>

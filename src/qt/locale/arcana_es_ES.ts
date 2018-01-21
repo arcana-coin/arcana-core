@@ -2876,7 +2876,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>arcana-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:

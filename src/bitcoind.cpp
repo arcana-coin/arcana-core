@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/arcana-config.h>
 #endif
 
 #include <chainparams.h>
@@ -30,7 +30,7 @@
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called Arcana (https://www.bitcoin.org/),
+ * This is the developer documentation of the reference client for an experimental new digital currency called Arcana (https://www.arcanacoin.org/),
  * which enables instant payments to anyone, anywhere in the world. Arcana uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *

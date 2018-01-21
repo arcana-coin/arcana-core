@@ -706,7 +706,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>arcana-core</name>
     <message>
         <source>Arcana Core</source>
         <translation>Arcana மையம்</translation>

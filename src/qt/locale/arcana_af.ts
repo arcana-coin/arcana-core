@@ -1010,7 +1010,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>arcana-core</name>
     <message>
         <source>Arcana Core</source>
         <translation>Arcana Kern</translation>

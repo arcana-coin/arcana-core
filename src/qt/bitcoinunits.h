@@ -44,12 +44,12 @@
 /** Arcana unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class BitcoinUnits: public QAbstractListModel
+class ArcanaUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinUnits(QObject *parent);
+    explicit ArcanaUnits(QObject *parent);
 
     /** Arcana units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
@@ -123,8 +123,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<BitcoinUnits::Unit> unitlist;
+    QList<ArcanaUnits::Unit> unitlist;
 };
-typedef BitcoinUnits::Unit BitcoinUnit;
+typedef ArcanaUnits::Unit BitcoinUnit;
 
 #endif // ARCANA_QT_BITCOINUNITS_H

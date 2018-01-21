@@ -174,7 +174,7 @@ academic.
 specifying a build without the Qt GUI, or specifying which version of the Qt
 libraries to use.
 
-4. I renamed the `bitcoin` package that contains the Qt GUI to `bitcoin-core` as
+4. I renamed the `bitcoin` package that contains the Qt GUI to `arcana-core` as
 that appears to be how the general population refers to it, in contrast to
 `bitcoin-xt` or `bitcoin-classic`. I wanted to make sure the general population
 knows what they are getting when installing the GUI package.

@@ -7,7 +7,7 @@
 #define ARCANA_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/arcana-config.h>
 #endif
 
 #ifdef WIN32

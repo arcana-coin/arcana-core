@@ -3988,7 +3988,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>arcana-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+343"/>
         <source>Options:</source>

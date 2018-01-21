@@ -6,7 +6,7 @@ MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
 ARCANAD=${ARCANAD:-$SRCDIR/arcanad}
 ARCANACLI=${ARCANACLI:-$SRCDIR/arcana-cli}
-ARCANATX=${ARCANATX:-$SRCDIR/bitcoin-tx}
+ARCANATX=${ARCANATX:-$SRCDIR/arcana-tx}
 ARCANAQT=${ARCANAQT:-$SRCDIR/qt/arcana-qt}
 
 [ ! -x $ARCANAD ] && echo "$ARCANAD not found or not executable." && exit 1
