@@ -5,7 +5,7 @@
 #ifndef ARCANA_QT_TRANSACTIONTABLEMODEL_H
 #define ARCANA_QT_TRANSACTIONTABLEMODEL_H
 
-#include <qt/bitcoinunits.h>
+#include <qt/arcanaunits.h>
 
 #include <QAbstractTableModel>
 #include <QStringList>

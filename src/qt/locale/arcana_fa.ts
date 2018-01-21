@@ -196,7 +196,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>ArcanaGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;امضای پیام...</translation>

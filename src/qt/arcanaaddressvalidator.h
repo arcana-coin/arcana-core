@@ -10,12 +10,12 @@
 /** Base58 entry widget validator, checks for valid characters and
  * removes some whitespace.
  */
-class BitcoinAddressEntryValidator : public QValidator
+class ArcanaAddressEntryValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinAddressEntryValidator(QObject *parent);
+    explicit ArcanaAddressEntryValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };

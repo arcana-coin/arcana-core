@@ -4,7 +4,7 @@
 
 #include <qt/bitcoinamountfield.h>
 
-#include <qt/bitcoinunits.h>
+#include <qt/arcanaunits.h>
 #include <qt/guiconstants.h>
 #include <qt/qvaluecombobox.h>
 

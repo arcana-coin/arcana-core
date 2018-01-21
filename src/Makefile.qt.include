@@ -118,9 +118,9 @@ QT_MOC_CPP = \
   qt/moc_addresstablemodel.cpp \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
-  qt/moc_bitcoinaddressvalidator.cpp \
+  qt/moc_arcanaaddressvalidator.cpp \
   qt/moc_bitcoinamountfield.cpp \
-  qt/moc_bitcoingui.cpp \
+  qt/moc_arcanagui.cpp \
   qt/moc_bitcoinunits.cpp \
   qt/moc_callback.cpp \
   qt/moc_clientmodel.cpp \
@@ -173,8 +173,8 @@ QT_MOC = \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
 
-QT_QRC_CPP = qt/qrc_bitcoin.cpp
-QT_QRC = qt/bitcoin.qrc
+QT_QRC_CPP = qt/qrc_arcana.cpp
+QT_QRC = qt/arcana.qrc
 QT_QRC_LOCALE_CPP = qt/qrc_arcana_locale.cpp
 QT_QRC_LOCALE = qt/arcana_locale.qrc
 
@@ -187,10 +187,10 @@ ARCANA_QT_H = \
   qt/addresstablemodel.h \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
-  qt/bitcoinaddressvalidator.h \
+  qt/arcanaaddressvalidator.h \
   qt/bitcoinamountfield.h \
-  qt/bitcoingui.h \
-  qt/bitcoinunits.h \
+  qt/arcanagui.h \
+  qt/arcanaunits.h \
   qt/callback.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
@@ -296,9 +296,9 @@ RES_ICONS = \
 
 ARCANA_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
-  qt/bitcoinaddressvalidator.cpp \
+  qt/arcanaaddressvalidator.cpp \
   qt/bitcoinamountfield.cpp \
-  qt/bitcoingui.cpp \
+  qt/arcanagui.cpp \
   qt/bitcoinunits.cpp \
   qt/clientmodel.cpp \
   qt/csvmodelwriter.cpp \
@@ -393,7 +393,7 @@ qt_arcana_qt_CPPFLAGS = $(AM_CPPFLAGS) $(ARCANA_INCLUDES) $(ARCANA_QT_INCLUDES) 
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 qt_arcana_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_arcana_qt_SOURCES = qt/bitcoin.cpp
+qt_arcana_qt_SOURCES = qt/arcana.cpp
 if TARGET_DARWIN
   qt_arcana_qt_SOURCES += $(ARCANA_MM)
 endif
@@ -422,7 +422,7 @@ $(srcdir)/qt/bitcoinstrings.cpp: $(libarcana_server_a_SOURCES) $(libarcana_walle
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" COPYRIGHT_HOLDERS_SUBSTITUTION="$(COPYRIGHT_HOLDERS_SUBSTITUTION)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: $(srcdir)/qt/bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(ARCANA_QT_BASE_CPP) qt/bitcoin.cpp $(ARCANA_QT_WINDOWS_CPP) $(ARCANA_QT_WALLET_CPP) $(ARCANA_QT_H) $(ARCANA_MM)
+translate: $(srcdir)/qt/bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(ARCANA_QT_BASE_CPP) qt/arcana.cpp $(ARCANA_QT_WINDOWS_CPP) $(ARCANA_QT_WALLET_CPP) $(ARCANA_QT_H) $(ARCANA_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/arcana_en.ts
 
