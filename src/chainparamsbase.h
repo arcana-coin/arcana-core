@@ -10,7 +10,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between bitcoin-cli and bitcoind)
+ * CBaseChainParams defines the base parameters (shared between arcana-cli and arcanad)
  * of a given instance of the Bitcoin system.
  */
 class CBaseChainParams

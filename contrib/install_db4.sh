@@ -80,7 +80,7 @@ make install
 echo
 echo "db4 build complete."
 echo
-echo 'When compiling bitcoind, run `./configure` in the following way:'
+echo 'When compiling arcanad, run `./configure` in the following way:'
 echo
 echo "  export BDB_PREFIX='${BDB_PREFIX}'"
 echo '  ./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" ...'

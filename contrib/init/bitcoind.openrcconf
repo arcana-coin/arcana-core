@@ -1,4 +1,4 @@
-# /etc/conf.d/bitcoind: config file for /etc/init.d/bitcoind
+# /etc/conf.d/arcanad: config file for /etc/init.d/arcanad
 
 # Config file location
 #ARCANAD_CONFIGFILE="/etc/arcana/arcana.conf"
@@ -7,25 +7,25 @@
 #ARCANAD_PIDDIR="/var/run/arcanad"
 
 # What filename to give the pidfile
-#ARCANAD_PIDFILE="${ARCANAD_PIDDIR}/bitcoind.pid"
+#ARCANAD_PIDFILE="${ARCANAD_PIDDIR}/arcanad.pid"
 
-# Where to write bitcoind data (be mindful that the blockchain is large)
+# Where to write arcanad data (be mindful that the blockchain is large)
 #ARCANAD_DATADIR="/var/lib/arcanad"
 
-# User and group to own bitcoind process
+# User and group to own arcanad process
 #ARCANAD_USER="arcana"
 #ARCANAD_GROUP="arcana"
 
-# Path to bitcoind executable
+# Path to arcanad executable
 #ARCANAD_BIN="/usr/bin/arcanad"
 
-# Nice value to run bitcoind under
+# Nice value to run arcanad under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
 #ARCANAD_OPTS=""
 
-# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# The timeout in seconds OpenRC will wait for arcanad to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule

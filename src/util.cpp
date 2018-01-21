@@ -83,7 +83,7 @@
 const int64_t nStartupTime = GetTime();
 
 const char * const ARCANA_CONF_FILENAME = "bitcoin.conf";
-const char * const ARCANA_PID_FILENAME = "bitcoind.pid";
+const char * const ARCANA_PID_FILENAME = "arcanad.pid";
 const char * const DEFAULT_DEBUGLOGFILE = "debug.log";
 
 ArgsManager gArgs;

@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 
 #define QAPP_ORG_NAME "Bitcoin"
 #define QAPP_ORG_DOMAIN "bitcoin.org"
-#define QAPP_APP_NAME_DEFAULT "Bitcoin-Qt"
-#define QAPP_APP_NAME_TESTNET "Bitcoin-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "Arcana-Qt"
+#define QAPP_APP_NAME_TESTNET "Arcana-Qt-testnet"
 
 #endif // ARCANA_QT_GUICONSTANTS_H

@@ -1,10 +1,10 @@
 Sample configuration files for:
 ```
-SystemD: bitcoind.service
-Upstart: bitcoind.conf
-OpenRC:  bitcoind.openrc
-         bitcoind.openrcconf
-CentOS:  bitcoind.init
+SystemD: arcanad.service
+Upstart: arcanad.conf
+OpenRC:  arcanad.openrc
+         arcanad.openrcconf
+CentOS:  arcanad.init
 OS X:    org.arcanacoin.arcanad.plist
 ```
 have been made available to assist packagers in creating node packages here.

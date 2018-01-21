@@ -6,7 +6,7 @@
 	<string>org.arcanacoin.arcanad</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>/usr/local/bin/bitcoind</string>
+		<string>/usr/local/bin/arcanad</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

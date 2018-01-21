@@ -10,7 +10,7 @@ fi
 
 ARCANAD_CONFIGFILE=${ARCANAD_CONFIGFILE:-/etc/arcana/arcana.conf}
 ARCANAD_PIDDIR=${ARCANAD_PIDDIR:-/var/run/arcanad}
-ARCANAD_PIDFILE=${ARCANAD_PIDFILE:-${ARCANAD_PIDDIR}/bitcoind.pid}
+ARCANAD_PIDFILE=${ARCANAD_PIDFILE:-${ARCANAD_PIDDIR}/arcanad.pid}
 ARCANAD_DATADIR=${ARCANAD_DATADIR:-${ARCANAD_DEFAULT_DATADIR}}
 ARCANAD_USER=${ARCANAD_USER:-${ARCANA_USER:-arcana}}
 ARCANAD_GROUP=${ARCANAD_GROUP:-arcana}
@@ -71,7 +71,7 @@ checkconfig()
 {
 	if ! grep -qs '^rpcpassword=' "${ARCANAD_CONFIGFILE}" ; then
 		eerror ""
-		eerror "ERROR: You must set a secure rpcpassword to run bitcoind."
+		eerror "ERROR: You must set a secure rpcpassword to run arcanad."
 		eerror "The setting must appear in ${ARCANAD_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
