@@ -44,7 +44,7 @@ necessary, the packager should bring the problem to the attention of the bitcoin
 developers so that an official fix to the issue can make it into the next
 release.
 
-### Patch0 bitcoin-0.12.0-libressl.patch
+### Patch0 arcana-0.12.0-libressl.patch
 
 This patch is only needed if building against LibreSSL. LibreSSL is not the
 standard TLS library on most Linux distributions. The patch will likely not be

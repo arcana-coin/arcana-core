@@ -299,7 +299,7 @@ libarcana_consensus_a_SOURCES = \
   primitives/transaction.h \
   pubkey.cpp \
   pubkey.h \
-  script/bitcoinconsensus.cpp \
+  script/arcanaconsensus.cpp \
   script/interpreter.cpp \
   script/interpreter.h \
   script/script.cpp \
@@ -443,7 +443,7 @@ arcana_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 
 # bitcoinconsensus library #
 if BUILD_ARCANA_LIBS
-include_HEADERS = script/bitcoinconsensus.h
+include_HEADERS = script/arcanaconsensus.h
 libbitcoinconsensus_la_SOURCES = $(crypto_libarcana_crypto_a_SOURCES) $(libarcana_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
