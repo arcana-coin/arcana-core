@@ -214,8 +214,8 @@
         <translation>&amp;Opsies</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Arcana</source>
+        <translation>Arcana</translation>
     </message>
     <message>
         <source>Wallet</source>

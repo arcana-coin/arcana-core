@@ -137,7 +137,7 @@ public:
 };
 
 /**
- * Bitcoin RPC command dispatcher.
+ * Arcana RPC command dispatcher.
  */
 class CRPCTable
 {

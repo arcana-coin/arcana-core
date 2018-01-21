@@ -48,8 +48,8 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Bitcoin"
-#define QAPP_ORG_DOMAIN "bitcoin.org"
+#define QAPP_ORG_NAME "Arcana"
+#define QAPP_ORG_DOMAIN "arcanacoin.org"
 #define QAPP_APP_NAME_DEFAULT "Arcana-Qt"
 #define QAPP_APP_NAME_TESTNET "Arcana-Qt-testnet"
 

@@ -11,7 +11,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between arcana-cli and arcanad)
- * of a given instance of the Bitcoin system.
+ * of a given instance of the Arcana system.
  */
 class CBaseChainParams
 {

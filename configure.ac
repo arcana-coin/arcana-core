@@ -17,7 +17,7 @@ AC_CONFIG_MACRO_DIR([build-aux/m4])
 BITCOIN_DAEMON_NAME=arcanad
 BITCOIN_GUI_NAME=arcana-qt
 BITCOIN_CLI_NAME=arcana-cli
-BITCOIN_TX_NAME=bitcoin-tx
+BITCOIN_TX_NAME=arcana-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])

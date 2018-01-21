@@ -277,7 +277,7 @@ CScript _createmultisig_redeemScript(CWallet * const pwallet, const UniValue& pa
     {
         const std::string& ks = keys[i].get_str();
 #ifdef ENABLE_WALLET
-        // Case 1: Bitcoin address and we have full public key:
+        // Case 1: Arcana address and we have full public key:
         CTxDestination dest = DecodeDestination(ks);
         if (pwallet && IsValidDestination(dest)) {
             CKeyID key = GetKeyForDestination(*pwallet, dest);
