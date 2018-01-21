@@ -20,7 +20,7 @@ public:
     State validate(QString &input, int &pos) const;
 };
 
-/** Arcana address widget validator, checks for a valid bitcoin address.
+/** Arcana address widget validator, checks for a valid arcana address.
  */
 class BitcoinAddressCheckValidator : public QValidator
 {
