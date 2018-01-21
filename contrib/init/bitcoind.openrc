@@ -19,7 +19,7 @@ ARCANAD_NICE=${ARCANAD_NICE:-${NICELEVEL:-0}}
 ARCANAD_OPTS="${ARCANAD_OPTS:-${ARCANA_OPTS}}"
 
 name="Arcana Core Daemon"
-description="Bitcoin cryptocurrency P2P network daemon"
+description="Arcana cryptocurrency P2P network daemon"
 
 command="/usr/bin/arcanad"
 command_args="-pid=\"${ARCANAD_PIDFILE}\" \
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Bitcoin Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Arcana Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1
