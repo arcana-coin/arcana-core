@@ -214,12 +214,12 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and arcana: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și arcana: URIs)</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Deschide un bitcoin: URI sau cerere de plată</translation>
+        <source>Open a arcana: URI or payment request</source>
+        <translation>Deschide un arcana: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>%1 behind</source>

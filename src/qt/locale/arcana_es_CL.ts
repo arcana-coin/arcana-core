@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Send coins to a Arcana address</source>
-        <translation>Enviar monedas a una dirección bitcoin</translation>
+        <translation>Enviar monedas a una dirección arcana</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -206,8 +206,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and bitcoin: URls)</translation>
+        <source>Request payments (generates QR codes and arcana: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and arcana: URls)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -773,7 +773,7 @@
     </message>
     <message>
         <source>Arcana Core</source>
-        <translation>bitcoin core</translation>
+        <translation>arcana core</translation>
     </message>
     <message>
         <source>Error loading block database</source>
