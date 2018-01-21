@@ -12,13 +12,13 @@
 ## </summary>
 ## </param>
 #
-interface(`bitcoin_domtrans',`
+interface(`arcana_domtrans',`
 	gen_require(`
-		type bitcoin_t, bitcoin_exec_t;
+		type arcana_t, arcana_exec_t;
 	')
 
 	corecmd_search_bin($1)
-	domtrans_pattern($1, bitcoin_exec_t, bitcoin_t)
+	domtrans_pattern($1, arcana_exec_t, arcana_t)
 ')
 
 
@@ -32,12 +32,12 @@ interface(`bitcoin_domtrans',`
 ##	</summary>
 ## </param>
 #
-interface(`bitcoin_initrc_domtrans',`
+interface(`arcana_initrc_domtrans',`
 	gen_require(`
-		type bitcoin_initrc_exec_t;
+		type arcana_initrc_exec_t;
 	')
 
-	init_labeled_script_domtrans($1, bitcoin_initrc_exec_t)
+	init_labeled_script_domtrans($1, arcana_initrc_exec_t)
 ')
 
 
@@ -51,12 +51,12 @@ interface(`bitcoin_initrc_domtrans',`
 ##	</summary>
 ## </param>
 #
-interface(`bitcoin_search_lib',`
+interface(`arcana_search_lib',`
 	gen_require(`
-		type bitcoin_var_lib_t;
+		type arcana_var_lib_t;
 	')
 
-	allow $1 bitcoin_var_lib_t:dir search_dir_perms;
+	allow $1 arcana_var_lib_t:dir search_dir_perms;
 	files_search_var_lib($1)
 ')
 
@@ -70,13 +70,13 @@ interface(`bitcoin_search_lib',`
 ##	</summary>
 ## </param>
 #
-interface(`bitcoin_read_lib_files',`
+interface(`arcana_read_lib_files',`
 	gen_require(`
-		type bitcoin_var_lib_t;
+		type arcana_var_lib_t;
 	')
 
 	files_search_var_lib($1)
-	read_files_pattern($1, bitcoin_var_lib_t, bitcoin_var_lib_t)
+	read_files_pattern($1, arcana_var_lib_t, arcana_var_lib_t)
 ')
 
 ########################################
@@ -89,13 +89,13 @@ interface(`bitcoin_read_lib_files',`
 ##	</summary>
 ## </param>
 #
-interface(`bitcoin_manage_lib_files',`
+interface(`arcana_manage_lib_files',`
 	gen_require(`
-		type bitcoin_var_lib_t;
+		type arcana_var_lib_t;
 	')
 
 	files_search_var_lib($1)
-	manage_files_pattern($1, bitcoin_var_lib_t, bitcoin_var_lib_t)
+	manage_files_pattern($1, arcana_var_lib_t, arcana_var_lib_t)
 ')
 
 ########################################
@@ -108,13 +108,13 @@ interface(`bitcoin_manage_lib_files',`
 ##	</summary>
 ## </param>
 #
-interface(`bitcoin_manage_lib_dirs',`
+interface(`arcana_manage_lib_dirs',`
 	gen_require(`
-		type bitcoin_var_lib_t;
+		type arcana_var_lib_t;
 	')
 
 	files_search_var_lib($1)
-	manage_dirs_pattern($1, bitcoin_var_lib_t, bitcoin_var_lib_t)
+	manage_dirs_pattern($1, arcana_var_lib_t, arcana_var_lib_t)
 ')
 
 
@@ -135,23 +135,23 @@ interface(`bitcoin_manage_lib_dirs',`
 ## </param>
 ## <rolecap/>
 #
-interface(`bitcoin_admin',`
+interface(`arcana_admin',`
 	gen_require(`
-		type bitcoin_t;
-		type bitcoin_initrc_exec_t;
-		type bitcoin_var_lib_t;
+		type arcana_t;
+		type arcana_initrc_exec_t;
+		type arcana_var_lib_t;
 	')
 
-	allow $1 bitcoin_t:process { ptrace signal_perms };
-	ps_process_pattern($1, bitcoin_t)
+	allow $1 arcana_t:process { ptrace signal_perms };
+	ps_process_pattern($1, arcana_t)
 
-	bitcoin_initrc_domtrans($1)
+	arcana_initrc_domtrans($1)
 	domain_system_change_exemption($1)
-	role_transition $2 bitcoin_initrc_exec_t system_r;
+	role_transition $2 arcana_initrc_exec_t system_r;
 	allow $2 system_r;
 
 	files_search_var_lib($1)
-	admin_pattern($1, bitcoin_var_lib_t)
+	admin_pattern($1, arcana_var_lib_t)
 
 ')
 
