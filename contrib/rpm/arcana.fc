@@ -1,0 +1,8 @@
+/usr/bin/arcana-cli		--	gen_context(system_u:object_r:arcana_exec_t,s0)
+/usr/sbin/arcanad		--	gen_context(system_u:object_r:arcana_exec_t,s0)
+/usr/lib(64)?/arcana/arcanad		--	gen_context(system_u:object_r:arcana_exec_t,s0)
+
+/etc/arcana(/.*)?		gen_context(system_u:object_r:arcana_conf_t,s0)
+/var/lib/arcana(/.*)?		gen_context(system_u:object_r:arcana_var_lib_t,s0)
+
+(/var)?/run/arcanad(/.*)?   gen_context(system_u:object_r:arcana_var_run_t,s0)
