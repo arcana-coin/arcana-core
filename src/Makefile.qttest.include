@@ -2,8 +2,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/test/test_bitcoin-qt
-TESTS += qt/test/test_bitcoin-qt
+bin_PROGRAMS += qt/test/test_arcana-qt
+TESTS += qt/test/test_arcana-qt
 
 TEST_QT_MOC_CPP = \
   qt/test/moc_compattests.cpp \
@@ -25,10 +25,10 @@ TEST_QT_H = \
   qt/test/wallettests.h
 
 TEST_BITCOIN_CPP = \
-  test/test_bitcoin.cpp
+  test/test_arcana.cpp
 
 TEST_BITCOIN_H = \
-  test/test_bitcoin.h
+  test/test_arcana.h
 
 qt_test_test_arcana_qt_CPPFLAGS = $(AM_CPPFLAGS) $(ARCANA_INCLUDES) $(ARCANA_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
@@ -68,9 +68,9 @@ CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 
 CLEANFILES += $(CLEAN_BITCOIN_QT_TEST)
 
-test_arcana_qt : qt/test/test_bitcoin-qt$(EXEEXT)
+test_arcana_qt : qt/test/test_arcana-qt$(EXEEXT)
 
-test_arcana_qt_check : qt/test/test_bitcoin-qt$(EXEEXT) FORCE
+test_arcana_qt_check : qt/test/test_arcana-qt$(EXEEXT) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
 test_arcana_qt_clean: FORCE

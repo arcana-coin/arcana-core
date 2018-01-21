@@ -10,7 +10,7 @@
 #include <qt/transactiontablemodel.h>
 #include <qt/transactionview.h>
 #include <qt/walletmodel.h>
-#include <test/test_bitcoin.h>
+#include <test/test_arcana.h>
 #include <validation.h>
 #include <wallet/wallet.h>
 #include <qt/overviewpage.h>
@@ -144,9 +144,9 @@ void BumpFee(TransactionView& view, const uint256& txid, bool expectDisabled, st
 //
 // This also requires overriding the default minimal Qt platform:
 //
-//     src/qt/test/test_bitcoin-qt -platform xcb      # Linux
-//     src/qt/test/test_bitcoin-qt -platform windows  # Windows
-//     src/qt/test/test_bitcoin-qt -platform cocoa    # macOS
+//     src/qt/test/test_arcana-qt -platform xcb      # Linux
+//     src/qt/test/test_arcana-qt -platform windows  # Windows
+//     src/qt/test/test_arcana-qt -platform cocoa    # macOS
 void TestGUI()
 {
     g_address_type = OUTPUT_TYPE_P2SH_SEGWIT;
