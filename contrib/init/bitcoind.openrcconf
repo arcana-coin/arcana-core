@@ -1,29 +1,29 @@
 # /etc/conf.d/bitcoind: config file for /etc/init.d/bitcoind
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
+#ARCANAD_CONFIGFILE="/etc/arcana/arcana.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/bitcoind"
+# What directory to write pidfile to?  (created and owned by $ARCANAD_USER)
+#ARCANAD_PIDDIR="/var/run/arcanad"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitcoind.pid"
+#ARCANAD_PIDFILE="${ARCANAD_PIDDIR}/bitcoind.pid"
 
 # Where to write bitcoind data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/bitcoind"
+#ARCANAD_DATADIR="/var/lib/arcanad"
 
 # User and group to own bitcoind process
-#BITCOIND_USER="bitcoin"
-#BITCOIND_GROUP="bitcoin"
+#ARCANAD_USER="arcana"
+#ARCANAD_GROUP="arcana"
 
 # Path to bitcoind executable
-#BITCOIND_BIN="/usr/bin/bitcoind"
+#ARCANAD_BIN="/usr/bin/arcanad"
 
 # Nice value to run bitcoind under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#BITCOIND_OPTS=""
+#ARCANAD_OPTS=""
 
 # The timeout in seconds OpenRC will wait for bitcoind to terminate
 # after a SIGTERM has been raised.

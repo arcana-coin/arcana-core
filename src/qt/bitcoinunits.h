@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOINUNITS_H
-#define BITCOIN_QT_BITCOINUNITS_H
+#ifndef ARCANA_QT_BITCOINUNITS_H
+#define ARCANA_QT_BITCOINUNITS_H
 
 #include <amount.h>
 
@@ -56,9 +56,9 @@ public:
      */
     enum Unit
     {
-        BTC,
-        mBTC,
-        uBTC
+        AKN,
+        mAKN,
+        uAKN
     };
 
     enum SeparatorStyle
@@ -127,4 +127,4 @@ private:
 };
 typedef BitcoinUnits::Unit BitcoinUnit;
 
-#endif // BITCOIN_QT_BITCOINUNITS_H
+#endif // ARCANA_QT_BITCOINUNITS_H

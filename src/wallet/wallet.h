@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_WALLET_H
-#define BITCOIN_WALLET_WALLET_H
+#ifndef ARCANA_WALLET_WALLET_H
+#define ARCANA_WALLET_WALLET_H
 
 #include <amount.h>
 #include <policy/feerate.h>
@@ -1263,4 +1263,4 @@ CTxDestination GetDestinationForKey(const CPubKey& key, OutputType);
 /** Get all destinations (potentially) supported by the wallet for the given key. */
 std::vector<CTxDestination> GetAllDestinationsForKey(const CPubKey& key);
 
-#endif // BITCOIN_WALLET_WALLET_H
+#endif // ARCANA_WALLET_WALLET_H

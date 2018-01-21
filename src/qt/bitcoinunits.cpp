@@ -17,9 +17,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(AKN);
+    unitlist.append(mAKN);
+    unitlist.append(uAKN);
     return unitlist;
 }
 
@@ -27,9 +27,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case AKN:
+    case mAKN:
+    case uAKN:
         return true;
     default:
         return false;
@@ -40,9 +40,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("µBTC (bits)");
+    case AKN: return QString("AKN");
+    case mAKN: return QString("mAKN");
+    case uAKN: return QString::fromUtf8("µAKN (bits)");
     default: return QString("???");
     }
 }
@@ -51,7 +51,7 @@ QString BitcoinUnits::shortName(int unit)
 {
     switch(unit)
     {
-    case uBTC: return QString::fromUtf8("bits");
+    case uAKN: return QString::fromUtf8("bits");
     default:   return longName(unit);
     }
 }
@@ -60,9 +60,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Bitcoins");
-    case mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Bitcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case AKN: return QString("Arcanas");
+    case mAKN: return QString("Milli-Arcanas (1 / 1" THIN_SP_UTF8 "000)");
+    case uAKN: return QString("Micro-Arcanas (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -71,9 +71,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC:  return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case AKN:  return 100000000;
+    case mAKN: return 100000;
+    case uAKN: return 100;
     default:   return 100000000;
     }
 }
@@ -82,9 +82,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case AKN: return 8;
+    case mAKN: return 5;
+    case uAKN: return 2;
     default: return 0;
     }
 }

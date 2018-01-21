@@ -13,7 +13,7 @@ can be found in the contrib/init folder.
 Service User
 ---------------------------------
 
-All three Linux startup configurations assume the existence of a "bitcoin" user
+All three Linux startup configurations assume the existence of an "arcana" user
 and group.  They must be created before attempting to use these scripts.
 The OS X configuration assumes bitcoind will be set up for the current user.
 
@@ -53,11 +53,11 @@ Paths
 
 All three configurations assume several paths that might need to be adjusted.
 
-Binary:              `/usr/bin/bitcoind`  
-Configuration file:  `/etc/bitcoin/bitcoin.conf`  
-Data directory:      `/var/lib/bitcoind`  
-PID file:            `/var/run/bitcoind/bitcoind.pid` (OpenRC and Upstart) or `/var/lib/bitcoind/bitcoind.pid` (systemd)  
-Lock file:           `/var/lock/subsys/bitcoind` (CentOS)  
+Binary:              `/usr/bin/arcanad`  
+Configuration file:  `/etc/arcana/arcana.conf`  
+Data directory:      `/var/lib/arcanad`  
+PID file:            `/var/run/arcanad/arcanad.pid` (OpenRC and Upstart) or `/var/lib/arcanad/arcanad.pid` (systemd)  
+Lock file:           `/var/lock/subsys/arcanad` (CentOS)  
 
 The configuration file, PID directory (if applicable) and data directory
 should all be owned by the bitcoin user and group.  It is advised for security
@@ -105,17 +105,17 @@ Copy bitcoind.init to /etc/init.d/bitcoind. Test by running `service bitcoind st
 
 Using this script, you can adjust the path and flags to the bitcoind program by
 setting the BITCOIND and FLAGS environment variables in the file
-/etc/sysconfig/bitcoind. You can also use the DAEMONOPTS environment variable here.
+/etc/sysconfig/arcanad. You can also use the DAEMONOPTS environment variable here.
 
 ### Mac OS X
 
-Copy org.bitcoin.bitcoind.plist into ~/Library/LaunchAgents. Load the launch agent by
-running `launchctl load ~/Library/LaunchAgents/org.bitcoin.bitcoind.plist`.
+Copy org.arcanacoin.arcanad.plist into ~/Library/LaunchAgents. Load the launch agent by
+running `launchctl load ~/Library/LaunchAgents/org.arcanacoin.arcanad.plist`.
 
 This Launch Agent will cause bitcoind to start whenever the user logs in.
 
 NOTE: This approach is intended for those wanting to run bitcoind as the current user.
-You will need to modify org.bitcoin.bitcoind.plist if you intend to use it as a
+You will need to modify org.arcanacoin.arcanad.plist if you intend to use it as a
 Launch Daemon with a dedicated bitcoin user.
 
 Auto-respawn

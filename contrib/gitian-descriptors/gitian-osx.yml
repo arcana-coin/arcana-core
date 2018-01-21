@@ -29,7 +29,7 @@ packages:
 - "fonts-tuffy"
 remotes:
 - "url": "https://github.com/bitcoin/bitcoin.git"
-  "dir": "bitcoin"
+  "dir": "arcana"
 files:
 - "MacOSX10.11.sdk.tar.gz"
 script: |

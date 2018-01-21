@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
-#define BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#ifndef ARCANA_ZMQ_ZMQPUBLISHNOTIFIER_H
+#define ARCANA_ZMQ_ZMQPUBLISHNOTIFIER_H
 
 #include <zmq/zmqabstractnotifier.h>
 
@@ -52,4 +52,4 @@ public:
     bool NotifyTransaction(const CTransaction &transaction) override;
 };
 
-#endif // BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#endif // ARCANA_ZMQ_ZMQPUBLISHNOTIFIER_H

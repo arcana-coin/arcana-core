@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_SENDCOINSENTRY_H
-#define BITCOIN_QT_SENDCOINSENTRY_H
+#ifndef ARCANA_QT_SENDCOINSENTRY_H
+#define ARCANA_QT_SENDCOINSENTRY_H
 
 #include <qt/walletmodel.h>
 
@@ -74,4 +74,4 @@ private:
     bool updateLabel(const QString &address);
 };
 
-#endif // BITCOIN_QT_SENDCOINSENTRY_H
+#endif // ARCANA_QT_SENDCOINSENTRY_H

@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  bitcoind The bitcoin core server.
+#  arcanad The arcana core server.
 #
 #
 # chkconfig: 345 80 20
-# description: bitcoind
-# processname: bitcoind
+# description: arcanad
+# processname: arcanad
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/bitcoind, see below
-if [ -f /etc/sysconfig/bitcoind ]; then
-        . /etc/sysconfig/bitcoind
+# you can override defaults in /etc/sysconfig/arcanad, see below
+if [ -f /etc/sysconfig/arcanad ]; then
+        . /etc/sysconfig/arcanad
 fi
 
 RETVAL=0
 
-prog=bitcoind
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/bitcoind
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/bitcoind}
+prog=arcanad
+# you can override the lockfile via ARCANAD_LOCKFILE in /etc/sysconfig/arcanad
+lockfile=${ARCANAD_LOCKFILE-/var/lock/subsys/arcanad}
 
-# bitcoind defaults to /usr/bin/bitcoind, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/bitcoind}
+# arcanad defaults to /usr/bin/arcanad, override with ARCANAD_BIN
+arcanad=${ARCANAD_BIN-/usr/bin/arcanad}
 
-# bitcoind opts default to -disablewallet, override with BITCOIND_OPTS
-bitcoind_opts=${BITCOIND_OPTS--disablewallet}
+# arcanad opts default to -disablewallet, override with ARCANAD_OPTS
+arcanadd_opts=${ARCANAD_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    daemon $DAEMONOPTS $arcanad $arcanadd_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

@@ -145,8 +145,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcoin"))
+    // return if URI is not valid or is no arcana: URI
+    if(!uri.isValid() || uri.scheme() != QString("arcana"))
         return false;
 
     SendCoinsRecipient rv;
@@ -186,7 +186,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BitcoinUnits::parse(BitcoinUnits::BTC, i->second, &rv.amount))
+                if(!BitcoinUnits::parse(BitcoinUnits::AKN, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -225,7 +225,7 @@ QString formatBitcoinURI(const SendCoinsRecipient &info)
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::BTC, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::AKN, info.amount, false, BitcoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -417,7 +417,7 @@ void openDebugLogfile()
 
 bool openBitcoinConf()
 {
-    boost::filesystem::path pathConfig = GetConfigFile(BITCOIN_CONF_FILENAME);
+    boost::filesystem::path pathConfig = GetConfigFile(ARCANA_CONF_FILENAME);
 
     /* Create the file */
     boost::filesystem::ofstream configFile(pathConfig, std::ios_base::app);
