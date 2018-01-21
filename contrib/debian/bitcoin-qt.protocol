@@ -1,6 +1,6 @@
 [Protocol]
 exec=arcana-qt '%u'
-protocol=bitcoin
+protocol=arcana
 input=none
 output=none
 helper=true

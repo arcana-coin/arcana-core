@@ -1,4 +1,4 @@
-dnl Copyright (c) 2013-2016 The Bitcoin Core developers
+dnl Copyright (c) 2013-2016 The Bytcoyn Core Developers
 dnl Distributed under the MIT software license, see the accompanying
 dnl file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -83,7 +83,7 @@ dnl Find the appropriate version of Qt libraries and includes.
 dnl Inputs: $1: Whether or not pkg-config should be used. yes|no. Default: yes.
 dnl Inputs: $2: If $1 is "yes" and --with-gui=auto, which qt version should be
 dnl         tried first.
-dnl Outputs: See _BITCOIN_QT_FIND_LIBS_*
+dnl Outputs: See _ARCANA_QT_FIND_LIBS_*
 dnl Outputs: Sets variables for all qt-related tools.
 dnl Outputs: arcana_enable_qt, arcana_enable_qt_dbus, arcana_enable_qt_test
 AC_DEFUN([ARCANA_QT_CONFIGURE],[
@@ -94,9 +94,9 @@ AC_DEFUN([ARCANA_QT_CONFIGURE],[
   fi
 
   if test x$use_pkgconfig = xyes; then
-    ARCANA_QT_CHECK([_BITCOIN_QT_FIND_LIBS_WITH_PKGCONFIG([$2])])
+    ARCANA_QT_CHECK([_ARCANA_QT_FIND_LIBS_WITH_PKGCONFIG([$2])])
   else
-    ARCANA_QT_CHECK([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG])
+    ARCANA_QT_CHECK([_ARCANA_QT_FIND_LIBS_WITHOUT_PKGCONFIG])
   fi
 
   dnl This is ugly and complicated. Yuck. Works as follows:
@@ -114,9 +114,9 @@ AC_DEFUN([ARCANA_QT_CONFIGURE],[
   CPPFLAGS="$QT_INCLUDES $CPPFLAGS"
   CXXFLAGS="$PIC_FLAGS $CXXFLAGS"
   if test x$arcana_qt_got_major_vers = x5; then
-    _BITCOIN_QT_IS_STATIC
+    _ARCANA_QT_IS_STATIC
     if test x$arcana_cv_static_qt = xyes; then
-      _BITCOIN_QT_FIND_STATIC_PLUGINS
+      _ARCANA_QT_FIND_STATIC_PLUGINS
       AC_DEFINE(QT_STATICPLUGIN, 1, [Define this symbol if qt plugins are static])
       AC_CACHE_CHECK(for Qt < 5.4, arcana_cv_need_acc_widget,[AC_COMPILE_IFELSE([AC_LANG_PROGRAM(
           [[#include <QtCore>]],[[
@@ -287,7 +287,7 @@ dnl Requires: Qt5. This check cannot determine if Qt4 is static.
 dnl Requires: INCLUDES and LIBS must be populated as necessary.
 dnl Output: arcana_cv_static_qt=yes|no
 dnl Output: Defines QT_STATICPLUGIN if plugins are static.
-AC_DEFUN([_BITCOIN_QT_IS_STATIC],[
+AC_DEFUN([_ARCANA_QT_IS_STATIC],[
   AC_CACHE_CHECK(for static Qt, arcana_cv_static_qt,[
   AC_COMPILE_IFELSE([AC_LANG_PROGRAM(
     [[#include <QtCore>]],
@@ -329,7 +329,7 @@ dnl Internal. Find paths necessary for linking qt static plugins
 dnl Inputs: arcana_qt_got_major_vers. 4 or 5.
 dnl Inputs: qt_plugin_path. optional.
 dnl Outputs: QT_LIBS is appended
-AC_DEFUN([_BITCOIN_QT_FIND_STATIC_PLUGINS],[
+AC_DEFUN([_ARCANA_QT_FIND_STATIC_PLUGINS],[
   if test x$arcana_qt_got_major_vers = x5; then
       if test x$qt_plugin_path != x; then
         QT_LIBS="$QT_LIBS -L$qt_plugin_path/platforms"
@@ -382,7 +382,7 @@ dnl         first.
 dnl Outputs: All necessary QT_* variables are set.
 dnl Outputs: arcana_qt_got_major_vers is set to "4" or "5".
 dnl Outputs: have_qt_test and have_qt_dbus are set (if applicable) to yes|no.
-AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITH_PKGCONFIG],[
+AC_DEFUN([_ARCANA_QT_FIND_LIBS_WITH_PKGCONFIG],[
   m4_ifdef([PKG_CHECK_MODULES],[
   auto_priority_version=$1
   if test x$auto_priority_version = x; then
@@ -434,7 +434,7 @@ dnl         If "auto", the version will be discovered by _ARCANA_QT_CHECK_QT5.
 dnl Outputs: All necessary QT_* variables are set.
 dnl Outputs: arcana_qt_got_major_vers is set to "4" or "5".
 dnl Outputs: have_qt_test and have_qt_dbus are set (if applicable) to yes|no.
-AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
+AC_DEFUN([_ARCANA_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
   TEMP_CPPFLAGS="$CPPFLAGS"
   TEMP_CXXFLAGS="$CXXFLAGS"
   CXXFLAGS="$PIC_FLAGS $CXXFLAGS"

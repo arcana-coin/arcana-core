@@ -1,6 +1,6 @@
 usr/local/bin/arcana-qt usr/bin
-share/pixmaps/bitcoin32.xpm usr/share/pixmaps
-share/pixmaps/bitcoin16.xpm usr/share/pixmaps
-share/pixmaps/bitcoin128.png usr/share/pixmaps
+share/pixmaps/arcana32.xpm usr/share/pixmaps
+share/pixmaps/arcana16.xpm usr/share/pixmaps
+share/pixmaps/arcana128.png usr/share/pixmaps
 debian/arcana-qt.desktop usr/share/applications
 debian/arcana-qt.protocol usr/share/kde4/services/

@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Bytcoyn Core Developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -136,9 +136,9 @@ nodist_test_test_arcana_SOURCES = $(GENERATED_TEST_FILES)
 
 $(ARCANA_TESTS): $(GENERATED_TEST_FILES)
 
-CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
+CLEAN_ARCANA_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 
-CLEANFILES += $(CLEAN_BITCOIN_TEST)
+CLEANFILES += $(CLEAN_ARCANA_TEST)
 
 arcana_test: $(TEST_BINARY)
 
@@ -146,7 +146,7 @@ arcana_test_check: $(TEST_BINARY) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
 arcana_test_clean : FORCE
-	rm -f $(CLEAN_BITCOIN_TEST) $(test_test_arcana_OBJECTS) $(TEST_BINARY)
+	rm -f $(CLEAN_ARCANA_TEST) $(test_test_arcana_OBJECTS) $(TEST_BINARY)
 
 check-local:
 	@echo "Running test/util/bitcoin-util-test.py..."
