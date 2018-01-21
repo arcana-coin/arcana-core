@@ -12,7 +12,7 @@ import operator
 import os
 import sys
 
-OUT_CPP="qt/bitcoinstrings.cpp"
+OUT_CPP="qt/arcanastrings.cpp"
 EMPTY=['""']
 
 def parse_po(text):

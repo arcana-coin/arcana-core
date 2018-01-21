@@ -3990,7 +3990,7 @@
 <context>
     <name>arcana-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+343"/>
+        <location filename="../arcanastrings.cpp" line="+343"/>
         <source>Options:</source>
         <translation>Options:</translation>
     </message>

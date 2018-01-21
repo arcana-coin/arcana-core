@@ -119,7 +119,7 @@ QT_MOC_CPP = \
   qt/moc_askpassphrasedialog.cpp \
   qt/moc_bantablemodel.cpp \
   qt/moc_arcanaaddressvalidator.cpp \
-  qt/moc_bitcoinamountfield.cpp \
+  qt/moc_arcanaamountfield.cpp \
   qt/moc_arcanagui.cpp \
   qt/moc_bitcoinunits.cpp \
   qt/moc_callback.cpp \
@@ -167,7 +167,7 @@ ARCANA_MM = \
 
 QT_MOC = \
   qt/bitcoin.moc \
-  qt/bitcoinamountfield.moc \
+  qt/arcanaamountfield.moc \
   qt/callback.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
@@ -188,7 +188,7 @@ ARCANA_QT_H = \
   qt/askpassphrasedialog.h \
   qt/bantablemodel.h \
   qt/arcanaaddressvalidator.h \
-  qt/bitcoinamountfield.h \
+  qt/arcanaamountfield.h \
   qt/arcanagui.h \
   qt/arcanaunits.h \
   qt/callback.h \
@@ -297,7 +297,7 @@ RES_ICONS = \
 ARCANA_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
   qt/arcanaaddressvalidator.cpp \
-  qt/bitcoinamountfield.cpp \
+  qt/arcanaamountfield.cpp \
   qt/arcanagui.cpp \
   qt/bitcoinunits.cpp \
   qt/clientmodel.cpp \
@@ -418,11 +418,11 @@ QT_QM=$(QT_TS:.ts=.qm)
 
 SECONDARY: $(QT_QM)
 
-$(srcdir)/qt/bitcoinstrings.cpp: $(libarcana_server_a_SOURCES) $(libarcana_wallet_a_SOURCES) $(libarcana_common_a_SOURCES) $(libarcana_zmq_a_SOURCES) $(libarcana_consensus_a_SOURCES) $(libarcana_util_a_SOURCES)
+$(srcdir)/qt/arcanastrings.cpp: $(libarcana_server_a_SOURCES) $(libarcana_wallet_a_SOURCES) $(libarcana_common_a_SOURCES) $(libarcana_zmq_a_SOURCES) $(libarcana_consensus_a_SOURCES) $(libarcana_util_a_SOURCES)
 	@test -n $(XGETTEXT) || echo "xgettext is required for updating translations"
 	$(AM_V_GEN) cd $(srcdir); XGETTEXT=$(XGETTEXT) PACKAGE_NAME="$(PACKAGE_NAME)" COPYRIGHT_HOLDERS="$(COPYRIGHT_HOLDERS)" COPYRIGHT_HOLDERS_SUBSTITUTION="$(COPYRIGHT_HOLDERS_SUBSTITUTION)" $(PYTHON) ../share/qt/extract_strings_qt.py $^
 
-translate: $(srcdir)/qt/bitcoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(ARCANA_QT_BASE_CPP) qt/arcana.cpp $(ARCANA_QT_WINDOWS_CPP) $(ARCANA_QT_WALLET_CPP) $(ARCANA_QT_H) $(ARCANA_MM)
+translate: $(srcdir)/qt/arcanastrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(ARCANA_QT_BASE_CPP) qt/arcana.cpp $(ARCANA_QT_WINDOWS_CPP) $(ARCANA_QT_WALLET_CPP) $(ARCANA_QT_H) $(ARCANA_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts $(srcdir)/qt/locale/arcana_en.ts
 

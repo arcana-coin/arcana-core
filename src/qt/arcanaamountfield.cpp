@@ -2,7 +2,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/bitcoinamountfield.h>
+#include <qt/arcanaamountfield.h>
 
 #include <qt/arcanaunits.h>
 #include <qt/guiconstants.h>
@@ -188,9 +188,9 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include <qt/bitcoinamountfield.moc>
+#include <qt/arcanaamountfield.moc>
 
-BitcoinAmountField::BitcoinAmountField(QWidget *parent) :
+ArcanaAmountField::ArcanaAmountField(QWidget *parent) :
     QWidget(parent),
     amount(0)
 {
@@ -220,19 +220,19 @@ BitcoinAmountField::BitcoinAmountField(QWidget *parent) :
     unitChanged(unit->currentIndex());
 }
 
-void BitcoinAmountField::clear()
+void ArcanaAmountField::clear()
 {
     amount->clear();
     unit->setCurrentIndex(0);
 }
 
-void BitcoinAmountField::setEnabled(bool fEnabled)
+void ArcanaAmountField::setEnabled(bool fEnabled)
 {
     amount->setEnabled(fEnabled);
     unit->setEnabled(fEnabled);
 }
 
-bool BitcoinAmountField::validate()
+bool ArcanaAmountField::validate()
 {
     bool valid = false;
     value(&valid);
@@ -240,7 +240,7 @@ bool BitcoinAmountField::validate()
     return valid;
 }
 
-void BitcoinAmountField::setValid(bool valid)
+void ArcanaAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -248,7 +248,7 @@ void BitcoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-bool BitcoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool ArcanaAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -258,29 +258,29 @@ bool BitcoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *BitcoinAmountField::setupTabChain(QWidget *prev)
+QWidget *ArcanaAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     QWidget::setTabOrder(amount, unit);
     return unit;
 }
 
-CAmount BitcoinAmountField::value(bool *valid_out) const
+CAmount ArcanaAmountField::value(bool *valid_out) const
 {
     return amount->value(valid_out);
 }
 
-void BitcoinAmountField::setValue(const CAmount& value)
+void ArcanaAmountField::setValue(const CAmount& value)
 {
     amount->setValue(value);
 }
 
-void BitcoinAmountField::setReadOnly(bool fReadOnly)
+void ArcanaAmountField::setReadOnly(bool fReadOnly)
 {
     amount->setReadOnly(fReadOnly);
 }
 
-void BitcoinAmountField::unitChanged(int idx)
+void ArcanaAmountField::unitChanged(int idx)
 {
     // Use description tooltip for current unit for the combobox
     unit->setToolTip(unit->itemData(idx, Qt::ToolTipRole).toString());
@@ -291,12 +291,12 @@ void BitcoinAmountField::unitChanged(int idx)
     amount->setDisplayUnit(newUnit);
 }
 
-void BitcoinAmountField::setDisplayUnit(int newUnit)
+void ArcanaAmountField::setDisplayUnit(int newUnit)
 {
     unit->setValue(newUnit);
 }
 
-void BitcoinAmountField::setSingleStep(const CAmount& step)
+void ArcanaAmountField::setSingleStep(const CAmount& step)
 {
     amount->setSingleStep(step);
 }

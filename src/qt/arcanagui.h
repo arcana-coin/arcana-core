@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ARCANA_QT_BITCOINGUI_H
-#define ARCANA_QT_BITCOINGUI_H
+#ifndef ARCANA_QT_ARCANAGUI_H
+#define ARCANA_QT_ARCANAGUI_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/arcana-config.h>
@@ -59,7 +59,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents an arcana wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     bool addWallet(const QString& name, WalletModel *walletModel);
@@ -272,4 +272,4 @@ private Q_SLOTS:
     void onMenuSelection(QAction* action);
 };
 
-#endif // ARCANA_QT_BITCOINGUI_H
+#endif // ARCANA_QT_ARCANAGUI_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ARCANA_QT_BITCOINUNITS_H
-#define ARCANA_QT_BITCOINUNITS_H
+#ifndef ARCANA_QT_ARCANAUNITS_H
+#define ARCANA_QT_ARCANAUNITS_H
 
 #include <amount.h>
 
@@ -127,4 +127,4 @@ private:
 };
 typedef ArcanaUnits::Unit BitcoinUnit;
 
-#endif // ARCANA_QT_BITCOINUNITS_H
+#endif // ARCANA_QT_ARCANAUNITS_H
