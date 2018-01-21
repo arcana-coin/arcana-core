@@ -47,10 +47,10 @@ AC_DEFUN([ARCANA_QT_PATH_PROGS],[
 ])
 
 dnl Initialize qt input.
-dnl This must be called before any other BITCOIN_QT* macros to ensure that
+dnl This must be called before any other ARCANA_QT* macros to ensure that
 dnl input variables are set correctly.
 dnl CAUTION: Do not use this inside of a conditional.
-AC_DEFUN([BITCOIN_QT_INIT],[
+AC_DEFUN([ARCANA_QT_INIT],[
   dnl enable qt support
   AC_ARG_WITH([gui],
     [AS_HELP_STRING([--with-gui@<:@=no|qt4|qt5|auto@:>@],
@@ -86,7 +86,7 @@ dnl         tried first.
 dnl Outputs: See _BITCOIN_QT_FIND_LIBS_*
 dnl Outputs: Sets variables for all qt-related tools.
 dnl Outputs: bitcoin_enable_qt, bitcoin_enable_qt_dbus, bitcoin_enable_qt_test
-AC_DEFUN([BITCOIN_QT_CONFIGURE],[
+AC_DEFUN([ARCANA_QT_CONFIGURE],[
   use_pkgconfig=$1
 
   if test x$use_pkgconfig = x; then

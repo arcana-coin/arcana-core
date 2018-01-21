@@ -557,7 +557,7 @@ fs::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\Arcana
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\Arcana
     // Mac: ~/Library/Application Support/Arcana
-    // Unix: ~/.bitcoin
+    // Unix: ~/.arcana
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Arcana";
