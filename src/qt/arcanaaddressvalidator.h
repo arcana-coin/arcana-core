@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ARCANA_QT_BITCOINADDRESSVALIDATOR_H
-#define ARCANA_QT_BITCOINADDRESSVALIDATOR_H
+#ifndef ARCANA_QT_ARCANAADDRESSVALIDATOR_H
+#define ARCANA_QT_ARCANAADDRESSVALIDATOR_H
 
 #include <QValidator>
 
@@ -22,14 +22,14 @@ public:
 
 /** Arcana address widget validator, checks for a valid arcana address.
  */
-class BitcoinAddressCheckValidator : public QValidator
+class ArcanaAddressCheckValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit BitcoinAddressCheckValidator(QObject *parent);
+    explicit ArcanaAddressCheckValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-#endif // ARCANA_QT_BITCOINADDRESSVALIDATOR_H
+#endif // ARCANA_QT_ARCANAADDRESSVALIDATOR_H

@@ -131,7 +131,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new ArcanaAddressEntryValidator(parent));
-    widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
+    widget->setCheckValidator(new ArcanaAddressCheckValidator(parent));
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -143,7 +143,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseArcanaURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no arcana: URI
     if(!uri.isValid() || uri.scheme() != QString("arcana"))
@@ -204,7 +204,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
+bool parseArcanaURI(QString uri, SendCoinsRecipient *out)
 {
     // Convert arcana:// to arcana:
     //
@@ -215,10 +215,10 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
         uri.replace(0, 10, "arcana:");
     }
     QUrl uriInstance(uri);
-    return parseBitcoinURI(uriInstance, out);
+    return parseArcanaURI(uriInstance, out);
 }
 
-QString formatBitcoinURI(const SendCoinsRecipient &info)
+QString formatArcanaURI(const SendCoinsRecipient &info)
 {
     QString ret = QString("arcana:%1").arg(info.address);
     int paramCount = 0;
@@ -415,7 +415,7 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathDebug)));
 }
 
-bool openBitcoinConf()
+bool openArcanaConf()
 {
     boost::filesystem::path pathConfig = GetConfigFile(ARCANA_CONF_FILENAME);
 

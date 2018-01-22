@@ -125,6 +125,6 @@ public:
 private:
     QList<ArcanaUnits::Unit> unitlist;
 };
-typedef ArcanaUnits::Unit BitcoinUnit;
+typedef ArcanaUnits::Unit ArcanaUnit;
 
 #endif // ARCANA_QT_ARCANAUNITS_H

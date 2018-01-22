@@ -125,5 +125,5 @@ int arcanaconsensus_verify_script(const unsigned char *scriptPubKey, unsigned in
 unsigned int arcanaconsensus_version()
 {
     // Just use the API version for now
-    return BITCOINCONSENSUS_API_VER;
+    return ARCANACONSENSUS_API_VER;
 }

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ARCANA_QT_BITCOINAMOUNTFIELD_H
-#define ARCANA_QT_BITCOINAMOUNTFIELD_H
+#ifndef ARCANA_QT_ARCANAAMOUNTFIELD_H
+#define ARCANA_QT_ARCANAAMOUNTFIELD_H
 
 #include <amount.h>
 
@@ -72,4 +72,4 @@ private Q_SLOTS:
 
 };
 
-#endif // ARCANA_QT_BITCOINAMOUNTFIELD_H
+#endif // ARCANA_QT_ARCANAAMOUNTFIELD_H

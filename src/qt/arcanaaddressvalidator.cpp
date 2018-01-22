@@ -80,12 +80,12 @@ QValidator::State ArcanaAddressEntryValidator::validate(QString &input, int &pos
     return state;
 }
 
-BitcoinAddressCheckValidator::BitcoinAddressCheckValidator(QObject *parent) :
+ArcanaAddressCheckValidator::ArcanaAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State BitcoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State ArcanaAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
     // Validate the passed Arcana address

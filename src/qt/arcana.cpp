@@ -173,11 +173,11 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 /** Class encapsulating Arcana Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class BitcoinCore: public QObject
+class ArcanaCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit BitcoinCore();
+    explicit ArcanaCore();
     /** Basic initialization, before starting initialization/shutdown thread.
      * Return true on success.
      */
@@ -263,18 +263,18 @@ private:
 
 #include <qt/arcana.moc>
 
-BitcoinCore::BitcoinCore():
+ArcanaCore::ArcanaCore():
     QObject()
 {
 }
 
-void BitcoinCore::handleRunawayException(const std::exception *e)
+void ArcanaCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(GetWarnings("gui")));
 }
 
-bool BitcoinCore::baseInitialize()
+bool ArcanaCore::baseInitialize()
 {
     if (!AppInitBasicSetup())
     {
@@ -295,7 +295,7 @@ bool BitcoinCore::baseInitialize()
     return true;
 }
 
-void BitcoinCore::initialize()
+void ArcanaCore::initialize()
 {
     try
     {
@@ -309,7 +309,7 @@ void BitcoinCore::initialize()
     }
 }
 
-void BitcoinCore::shutdown()
+void ArcanaCore::shutdown()
 {
     try
     {
@@ -410,7 +410,7 @@ void ArcanaApplication::startThread()
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    BitcoinCore *executor = new BitcoinCore();
+    ArcanaCore *executor = new ArcanaCore();
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -706,7 +706,7 @@ int main(int argc, char *argv[])
         // Perform base initialization before spinning up initialization/shutdown thread
         // This is acceptable because this function only contains steps that are quick to execute,
         // so the GUI thread won't be held up.
-        if (BitcoinCore::baseInitialize()) {
+        if (ArcanaCore::baseInitialize()) {
             app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
             WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("%1 didn't yet exit safely...").arg(QObject::tr(PACKAGE_NAME)), (HWND)app.getMainWinId());
