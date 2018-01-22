@@ -1,5 +1,5 @@
 
-## <summary>policy for bitcoin</summary>
+## <summary>policy for arcana</summary>
 
 
 ########################################
@@ -24,7 +24,7 @@ interface(`arcana_domtrans',`
 
 ########################################
 ## <summary>
-##	Execute bitcoin server in the bitcoin domain.
+##	Execute arcana server in the arcana domain.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -43,7 +43,7 @@ interface(`arcana_initrc_domtrans',`
 
 ########################################
 ## <summary>
-##	Search bitcoin lib directories.
+##	Search arcana lib directories.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -62,7 +62,7 @@ interface(`arcana_search_lib',`
 
 ########################################
 ## <summary>
-##	Read bitcoin lib files.
+##	Read arcana lib files.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -81,7 +81,7 @@ interface(`arcana_read_lib_files',`
 
 ########################################
 ## <summary>
-##	Manage bitcoin lib files.
+##	Manage arcana lib files.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -100,7 +100,7 @@ interface(`arcana_manage_lib_files',`
 
 ########################################
 ## <summary>
-##	Manage bitcoin lib directories.
+##	Manage arcana lib directories.
 ## </summary>
 ## <param name="domain">
 ##	<summary>
@@ -121,7 +121,7 @@ interface(`arcana_manage_lib_dirs',`
 ########################################
 ## <summary>
 ##	All of the rules required to administrate
-##	a bitcoin environment
+##	an arcana environment
 ## </summary>
 ## <param name="domain">
 ##	<summary>

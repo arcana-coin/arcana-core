@@ -37,7 +37,7 @@ cd "$WORKINGDIR" || exit 1
 
 #test if a version number has been passed as an argument
 if [ -n "$1" ]; then
-   #let's also check if the version number includes the prefix 'bitcoin-',
+   #let's also check if the version number includes the prefix 'arcana-',
    #  and add this prefix if it doesn't
    if [[ $1 == "$VERSIONPREFIX"* ]]; then
       VERSION="$1"

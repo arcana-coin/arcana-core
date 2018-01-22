@@ -1,4 +1,4 @@
-policy_module(bitcoin, 1.100.1)
+policy_module(arcana, 1.100.1)
 
 ########################################
 #
@@ -28,7 +28,7 @@ corenet_port(arcana_port_t)
 
 ########################################
 #
-# bitcoin local policy
+# arcana local policy
 #
 allow arcana_t self:process { fork };
 
